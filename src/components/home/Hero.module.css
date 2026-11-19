@@ -1,0 +1,132 @@
+/* Hero — owner's second reference in the site theme. Exactly one screen (100svh).
+   Desktop geometry (all derived, so it holds at every width):
+     --cl  content left (aligned with the header logo)
+     --cw  content width
+     --E   right edge of the cream circle at mid-height
+     --R   circle radius
+   The client photo is used exactly as supplied (1600×1408, height-driven on desktop).
+   Its left edge starts 6px inside the circle's widest point, so the circle overlaps
+   the edge cleanly while the grandfather's face (from 2% of the width) stays clear. */
+.hero {
+  --cl: max(var(--gutter), calc((100vw - var(--max)) / 2 + var(--gutter)));
+  --cw: min(31vw, 520px);
+  --E: calc(var(--cl) + var(--cw) + 40px);
+  --R: max(47vw, 75svh);
+  position: relative; height: 100svh; min-height: 560px; overflow: hidden; isolation: isolate;
+  color: var(--ink);
+  background:
+    radial-gradient(55% 60% at 0% 40%, rgba(255, 255, 255, 0.6), transparent 70%),
+    radial-gradient(40% 50% at 30% 100%, rgba(110, 155, 85, 0.12), transparent 70%),
+    #f5efdc;
+}
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -4; background: var(--grain); opacity: 0.5; pointer-events: none; }
+
+/* ---------- photograph (fills the screen) */
+.photo { position: absolute; inset: 0; margin: 0; z-index: -3; overflow: hidden; box-shadow: -1px 0 0 rgba(34, 75, 55, 0.15); }
+.photoInner { position: absolute; inset: 0; will-change: transform; transform: translateZ(0); backface-visibility: hidden; }
+.photo img { width: 100%; height: 100%; object-fit: cover; object-position: 40% 35%; }
+
+/* ---------- curved edge line (desktop only) */
+.edge { display: none; position: absolute; top: 0; right: 0; bottom: 0; width: auto; height: 100%; z-index: -2; overflow: visible; pointer-events: none; }
+.edge path { fill: none; stroke: var(--earth); stroke-width: 2.5; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+
+/* ---------- cream circle (no longer used on desktop; kept hidden) */
+.panel { position: absolute; border-radius: 50%; pointer-events: none; }
+.panel {
+  z-index: -1;
+  background-color: #f5efdc;
+  background-image: radial-gradient(60% 60% at 70% 40%, rgba(255, 255, 255, 0.55), transparent 70%), var(--grain);
+  box-shadow: 0 20px 60px rgba(22, 51, 37, 0.18);
+}
+
+/* ---------- foliage */
+.leaf { position: absolute; z-index: 0; pointer-events: none; filter: drop-shadow(0 6px 10px rgba(22, 51, 37, 0.25)); }
+.leafLeft { top: 40%; left: -18px; width: 190px; }
+.leafTop { top: -20px; width: 250px; }
+
+/* ---------- text */
+.content { position: relative; z-index: 1; container-type: inline-size; }
+.title { font-size: clamp(38px, 12.8cqw, 74px); line-height: 1; letter-spacing: -0.03em; color: var(--forest); }
+.mask { display: block; overflow: hidden; padding-bottom: 0.09em; margin-bottom: -0.09em; }
+.line { display: block; }
+.accent { background: linear-gradient(90deg, var(--accent), var(--earth)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ta { margin-top: 16px; font-size: clamp(21px, 0.9vw + 14px, 29px); font-weight: 600; line-height: 1.4; color: var(--ink); }
+.divider { display: block; width: 100%; max-width: 440px; height: 1px; margin: 14px 0 14px; background: linear-gradient(90deg, var(--accent) 0 90px, var(--line) 90px); }
+.lead { max-width: 26em; font-size: var(--fs-lead); line-height: 1.6; color: #34463a; }
+.btns { margin-top: 22px; flex-wrap: nowrap; }
+.btns :global(.btn) svg { width: 18px; height: 18px; transition: transform 0.25s var(--ease); }
+.btns :global(.btn):hover svg { transform: translateX(3px); }
+
+.features { list-style: none; margin: 24px 0 0; padding: 0; display: flex; }
+.feature {
+  display: grid; justify-items: center; gap: 6px; padding: 0 16px; text-align: center;
+  font-size: 14px; font-weight: 600; line-height: 1.25; color: var(--ink);
+}
+.feature:first-child { padding-left: 0; }
+.feature + .feature { border-left: 1px solid var(--line); }
+.fIcon { width: 34px; height: 34px; color: var(--accent); }
+.fIcon svg { width: 100%; height: 100%; }
+
+/* =============== desktop: circle layout =============== */
+@media (min-width: 1200px) and (min-aspect-ratio: 5/4) {
+  /* photo with a flowing convex left edge: curves away at the top and bottom (foliage / cloth),
+     stays within ~1.5% of the edge beside the grandfather (26%–62% of the height) so his face is never cut */
+  .photo { left: calc(var(--E) - 6px); box-shadow: none;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M15 0C6 12 0 26 0 42C0 60 6 82 17 100L100 100L100 0Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+            mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath d='M15 0C6 12 0 26 0 42C0 60 6 82 17 100L100 100L100 0Z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat; }
+  .edge { display: block; left: calc(var(--E) - 6px); }
+  .photo img { object-position: 0% 30%; }
+  .panel { display: none; }
+  .leafTop { left: calc(var(--E) - 150px); }
+  .content {
+    position: absolute; left: var(--cl); width: var(--cw); top: 0; bottom: 0;
+    display: flex; flex-direction: column; justify-content: center;
+    padding-top: calc(var(--header-h) + 4px); padding-bottom: 10px;
+  }
+}
+@media (min-width: 1200px) and (min-aspect-ratio: 5/4) and (max-height: 800px) {
+  .ta { margin-top: 10px; }
+  .divider { margin: 10px 0; }
+  .btns { margin-top: 16px; }
+  .features { margin-top: 16px; }
+  .fIcon { width: 28px; height: 28px; }
+  .feature { padding: 0 12px; font-size: 14px; }
+}
+
+/* =============== tablets and phones: photo on top, cream panel below =============== */
+@media (max-width: 1199px), (max-aspect-ratio: 5/4) {
+  .hero { display: flex; flex-direction: column; justify-content: flex-end; }
+  .photo { bottom: auto; height: 52svh; }
+  .photo img { object-position: 50% 30%; }
+  .panel { display: none; }
+  .content { padding: 22px var(--gutter) 20px; isolation: isolate; }
+  .content::before {
+    content: ""; position: absolute; z-index: -1; left: -40vw; right: -40vw; top: -34px; bottom: 0;
+    border-radius: 50% 50% 0 0 / 70px 70px 0 0; background-color: #f5efdc; background-image: var(--grain);
+    box-shadow: 0 -16px 40px rgba(22, 51, 37, 0.18);
+  }
+  .title { font-size: clamp(36px, 9.5cqw, 64px); line-height: 1.02; }
+  .mask { display: inline-block; margin-right: 0.22em; }
+  .leaf { display: none; }
+  .features { margin-top: 18px; justify-content: space-between; }
+  .feature { padding: 0 8px; }
+}
+@media (max-width: 600px) {
+  .btns :global(.btn) { padding: 0 18px; font-size: 15px; }
+  .lead { font-size: 16px; }
+  .photo { height: 46svh; }
+  .feature { font-size: 13px; padding: 0 4px; }
+  .fIcon { width: 26px; height: 26px; }
+}
+@media (max-width: 380px), (max-height: 740px) and (max-width: 767px) {
+  .title { font-size: 30px; }
+  .ta { font-size: 19px; margin-top: 8px; }
+  .divider { margin: 8px 0; }
+  .lead { font-size: 15px; line-height: 1.5; }
+  .btns { margin-top: 12px; gap: 8px; }
+  .btns :global(.btn) { padding: 0 14px; font-size: 14px; min-height: 44px; }
+  .features { display: none; }
+}
+@media (max-width: 340px) {
+  .btns :global(.btn) { padding: 0 11px; }
+}

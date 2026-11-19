@@ -1,0 +1,408 @@
+{
+ "shipping-policy": {
+  "slug": "shipping-policy",
+  "title": "Shipping Policy",
+  "intro": "At Naadu Nalam, we aim to make your shopping experience simple and transparent. This Shipping Policy explains how orders are processed, dispatched and delivered.",
+  "updated": "Last updated: 25/08/2026",
+  "sections": [
+   {
+    "heading": "Order processing",
+    "lines": [
+     "Processing begins once your order has been placed and confirmed on the website. You will see your order details and the total payable, including delivery, before you confirm.",
+     "Orders are packed within 24–48 hours on business days (Monday–Saturday). Orders placed on Sunday are packed on the next business day.",
+     "Fruits, vegetables and frozen items are bought against the day’s orders. These items are stocked in limited daily quantities and may sell out. Delivery slots for perishable orders may be confirmed by SMS or email."
+    ]
+   },
+   {
+    "heading": "Shipping and delivery",
+    "lines": [
+     "Naadu Nalam delivers across Chennai and select locations in Tamil Nadu, and ships non-perishable items more widely.",
+     "Chennai and surrounding pin codes — 1–3 business days",
+     "Other Tamil Nadu metros — 3–5 business days",
+     "Rest of India — 5–8 business days, non-perishable items only",
+     "Fruits, vegetables and frozen items are delivered only within Chennai and selected Tamil Nadu locations. If your pin code is outside our perishable-delivery area, perishable items will not be available at checkout.",
+     "Fruits, vegetables and frozen items are packed in insulated packaging and handled on priority.",
+     "Receiving your order. Please make sure someone is available to receive the order at the delivery address, particularly for perishable and frozen items. If a delivery cannot be completed because no one is available, we will attempt to contact you to reschedule. Perishable items that cannot be delivered after a failed attempt may not be re-dispatched.",
+     "Delivery timelines may vary depending on the delivery location and other circumstances. The estimated delivery information shown during checkout will apply where available."
+    ]
+   },
+   {
+    "heading": "Shipping charges",
+    "lines": [
+     "We charge a flat delivery fee of ₹50 per order, on every order and to every serviceable location. There are no additional handling or packaging charges.",
+     "The delivery fee is shown separately in your cart and again on the checkout page before you confirm the order."
+    ]
+   },
+   {
+    "heading": "Delivery delays",
+    "lines": [
+     "The timelines above are estimates, not guarantees. Delivery may be affected by circumstances outside our reasonable control, including:",
+     "Weather conditions",
+     "Local restrictions",
+     "Courier or transport disruption",
+     "Operational issues",
+     "An incorrect or incomplete delivery address",
+     "If your order is delayed beyond the stated window, contact us using the details below and we will trace it for you."
+    ]
+   },
+   {
+    "heading": "Incorrect or incomplete address",
+    "lines": [
+     "Please check your delivery address, pin code and phone number carefully before confirming an order. An incorrect or incomplete address may delay delivery or prevent it from being completed.",
+     "If you notice an error after placing an order, contact us as soon as possible and we will try to update the details before the order is dispatched.",
+     "Where a delivery cannot be completed because of an incorrect or incomplete address, we will attempt to contact you to arrange redelivery. As noted above, perishable items that cannot be delivered after a failed attempt may not be re-dispatched."
+    ]
+   },
+   {
+    "heading": "Damaged, spoiled or incorrect orders",
+    "lines": [
+     "If an order arrives damaged, spoiled or incorrect, please report it within 24 hours of delivery.",
+     "Please contact us as soon as possible with your order details and relevant photographs where applicable. This helps us resolve the issue quickly and, where needed, raise it with the seller or delivery partner.",
+     "Our Refund Policy sets out what is covered and how refunds are processed.",
+     "Questions about a delivery?",
+     "We typically reply within one business day.",
+     "EMAIL",
+     "hello@naadunalam.in",
+     "PHONE",
+     "+91 90921 14630",
+     "ADDRESS",
+     "Chennai, Tamil Nadu 600001, India",
+     "HOURS",
+     "Monday to Saturday, 9:00 AM – 6:00 PM. Sunday closed.",
+     "Contact Us"
+    ]
+   }
+  ]
+ },
+ "refund-policy": {
+  "slug": "refund-policy",
+  "title": "Return & Refund Policy",
+  "intro": "We want you to have a positive experience with Naadu Nalam. This policy explains when returns, replacements or refunds may be available for eligible orders. Because we sell food and farm products, and many items are perishable, please review this policy before placing an order.",
+  "updated": "Last updated: 25/08/2026",
+  "sections": [
+   {
+    "heading": "Eligibility",
+    "lines": [
+     "The following may be eligible for a refund or replacement:",
+     "Damaged, spoiled or incorrect items — reported within 24 hours of delivery.",
+     "Non-perishable products — unopened and in their original packaging, reported within 7 days.",
+     "This policy applies to marketplace orders in the same way as to items we supply directly, including items supplied by independent sellers on our marketplace."
+    ]
+   },
+   {
+    "heading": "Damaged or spoiled products",
+    "lines": [
+     "If an item arrives damaged or spoiled, report it within 24 hours of delivery. Please send us:",
+     "Your order number",
+     "The product name and details",
+     "Photographs or a short video of the issue, where applicable",
+     "A brief description of what is wrong",
+     "Photographs help us resolve the issue quickly and, where needed, raise it with the seller or delivery partner."
+    ]
+   },
+   {
+    "heading": "Incorrect product",
+    "lines": [
+     "If you receive a product different from what you ordered, report it within 24 hours of delivery with your order number, the item you received and a photograph where possible.",
+     "Where stock allows, we may offer a replacement of the correct item instead of a refund. If a replacement is not available, an approved refund will be processed as set out below."
+    ]
+   },
+   {
+    "heading": "Quality concerns",
+    "lines": [
+     "If you have a genuine concern about the quality or condition of an item you received, tell us within 24 hours of delivery with your order number, photographs where applicable and a description of the problem. We will review each case individually.",
+     "Farm produce is a natural product, so size, colour and appearance will vary from the photographs shown on the website. Natural variation of this kind is not in itself a quality defect."
+    ]
+   },
+   {
+    "heading": "Non-returnable items",
+    "lines": [
+     "The following are not eligible for return:",
+     "Fruits, vegetables and frozen items, once delivered in acceptable condition.",
+     "Products that have been consumed, or stored improperly after delivery.",
+     "This does not affect your rights where an item was damaged, spoiled or incorrect on delivery and reported within 24 hours."
+    ]
+   },
+   {
+    "heading": "Refunds",
+    "lines": [
+     "Requests are reviewed individually against the eligibility rules above. Once a refund is approved:",
+     "Orders paid online — the refund is returned to the original payment method within 5–7 business days.",
+     "Cash on Delivery orders — there is no original payment method to refund to, so we will ask you for a UPI ID or bank account and process the refund there within the same 5–7 business days.",
+     "The time taken for the amount to appear in your account after we process it may depend on your bank or payment provider."
+    ]
+   },
+   {
+    "heading": "Replacements",
+    "lines": [
+     "Where stock allows, we may offer a replacement instead of a refund for damaged or incorrect items. We will confirm this with you before arranging it."
+    ]
+   },
+   {
+    "heading": "Order cancellation",
+    "lines": [
+     "If you need to cancel an order, contact us as soon as possible with your order number.",
+     "Orders are packed within 24–48 hours on business days, and perishable items are bought against the day’s orders, so cancellation may not be possible once an order has been packed or dispatched.",
+     "We may also refuse or cancel an order ourselves for fraud prevention, stock availability or delivery restrictions, as set out in our Terms of Service. Where we do, anything you have already paid for that order is refunded.",
+     "Need to report a problem?",
+     "Email us with your order number, photos of the issue and a brief description. We typically reply within one business day.",
+     "EMAIL",
+     "hello@naadunalam.in",
+     "PHONE",
+     "+91 90921 14630",
+     "ADDRESS",
+     "Chennai, Tamil Nadu 600001, India",
+     "HOURS",
+     "Monday to Saturday, 9:00 AM – 6:00 PM. Sunday closed.",
+     "Contact Us"
+    ]
+   }
+  ]
+ },
+ "terms": {
+  "slug": "terms",
+  "title": "Terms of Service",
+  "intro": "These Terms of Service govern your use of the Naadu Nalam website and your purchase of products through the website. Please read them alongside our Privacy Policy, Shipping Policy and Refund Policy, which form part of these terms.",
+  "updated": "Last updated: 25/08/2026",
+  "sections": [
+   {
+    "heading": "Acceptance of terms",
+    "lines": [
+     "By using the Naadu Nalam website and placing orders with us, you agree to these terms. If you do not agree with them, please do not use the website to place an order."
+    ]
+   },
+   {
+    "heading": "About our website",
+    "lines": [
+     "Naadu Nalam is an online marketplace for traditional and natural food and farm products.",
+     "Some products are sold by independent sellers who maintain their own storefronts on our marketplace. Where an item is supplied by an independent seller, that seller is responsible for the description, quality and packing of the item, and this is indicated on the product page. Our Refund Policy applies to marketplace orders in the same way as to items we supply directly."
+    ]
+   },
+   {
+    "heading": "Account registration",
+    "lines": [
+     "You may create an account to manage your orders and saved delivery addresses. If you do:",
+     "You must provide accurate account and delivery information, and keep it up to date.",
+     "You are responsible for keeping your login details confidential.",
+     "You are responsible for activity carried out through your account.",
+     "Tell us promptly if you believe your account has been used without your permission."
+    ]
+   },
+   {
+    "heading": "Product information",
+    "lines": [
+     "We aim to display accurate product descriptions. Product descriptions and images are provided for your information, and availability may change without notice.",
+     "Farm produce is a natural product, so size, colour and appearance will vary from the photographs shown."
+    ]
+   },
+   {
+    "heading": "Pricing",
+    "lines": [
+     "Prices are shown in Indian Rupees and include the price you pay for the product. Delivery is charged separately and shown before you confirm your order, as set out in our Shipping Policy.",
+     "Prices may change from time to time. Any taxes or charges that apply will be displayed where required before you confirm your order.",
+     "If a price or description is published in error, we may correct it and cancel any order affected by the mistake, refunding anything you have already paid."
+    ]
+   },
+   {
+    "heading": "Orders",
+    "lines": [
+     "Placing an order is an offer to buy. A contract is formed when we confirm the order.",
+     "We reserve the right to refuse or cancel an order for fraud prevention, stock availability, or delivery restrictions. Where we cancel an order, anything you have already paid for that order is refunded."
+    ]
+   },
+   {
+    "heading": "Payments",
+    "lines": [
+     "Where you pay by Cash on Delivery, payment falls due in full when the order is handed to you.",
+     "Where an online payment method is offered, the order is confirmed once payment is authorised. Online payments are completed on the payment provider’s own systems; we do not collect or store your card, UPI or net-banking details."
+    ]
+   },
+   {
+    "heading": "Availability of perishable items",
+    "lines": [
+     "Fruits, vegetables and frozen items are stocked in limited daily quantities. If an item becomes unavailable after you order it, we will contact you and either substitute it with your agreement or refund that item in full."
+    ]
+   },
+   {
+    "heading": "Shipping and delivery",
+    "lines": [
+     "Delivery areas, timelines and charges are set out in our Shipping Policy.",
+     "Delivery estimates are not guarantees, and may be affected by weather, local restrictions or courier disruption."
+    ]
+   },
+   {
+    "heading": "Returns and refunds",
+    "lines": [
+     "Because many of our products are perishable, specific rules apply to what can be returned and by when. These are set out in full in our Return & Refund Policy."
+    ]
+   },
+   {
+    "heading": "User responsibilities",
+    "lines": [
+     "When using this website, you agree to:",
+     "Provide accurate account and delivery information.",
+     "Use the website lawfully and for its intended purpose.",
+     "Not misuse the website or interfere with how it works.",
+     "Not attempt unauthorised access to the website, other accounts or our systems.",
+     "Not resell products bought here without our permission."
+    ]
+   },
+   {
+    "heading": "Intellectual property",
+    "lines": [
+     "The Naadu Nalam name, logo, site design, photographs and written content belong to us or our licensors and may not be copied or reused without permission.",
+     "Content supplied by independent sellers for their own product listings remains the responsibility of that seller."
+    ]
+   },
+   {
+    "heading": "Website availability",
+    "lines": [
+     "We aim to keep the website available, but access may occasionally be interrupted by maintenance, technical issues, network problems or other circumstances outside our reasonable control. We do not guarantee uninterrupted access."
+    ]
+   },
+   {
+    "heading": "Limitation of liability",
+    "lines": [
+     "Nothing in these terms limits any liability that cannot be limited under applicable law, including liability for death or personal injury caused by negligence.",
+     "Subject to that, we are not liable for indirect or consequential loss, and our total liability in respect of any order is limited to the amount paid for that order."
+    ]
+   },
+   {
+    "heading": "Changes to these terms",
+    "lines": [
+     "We may update these terms from time to time. The version published on this page at the time you place an order is the version that applies to that order."
+    ]
+   },
+   {
+    "heading": "Governing law",
+    "lines": [
+     "These terms are governed by the laws of India, and the courts at Chennai, Tamil Nadu have jurisdiction over any dispute arising from them.",
+     "Questions about these terms?",
+     "We typically reply within one business day.",
+     "EMAIL",
+     "hello@naadunalam.in",
+     "PHONE",
+     "+91 90921 14630",
+     "ADDRESS",
+     "Chennai, Tamil Nadu 600001, India",
+     "HOURS",
+     "Monday to Saturday, 9:00 AM – 6:00 PM. Sunday closed.",
+     "Contact Us"
+    ]
+   }
+  ]
+ },
+ "privacy-policy": {
+  "slug": "privacy-policy",
+  "title": "Privacy Policy",
+  "intro": "Your privacy matters to us. This Privacy Policy explains how Naadu Nalam collects, uses, stores and protects information when you use our website and services. It applies to this website and to orders fulfilled through it.",
+  "updated": "Last updated: 25/08/2026",
+  "sections": [
+   {
+    "heading": "Information we collect",
+    "lines": [
+     "Order information — your name, delivery address, pin code, email address and phone number, collected at checkout so we can process, pack, deliver and invoice your order.",
+     "Account information — if you create an account, your username, email address and saved delivery addresses.",
+     "Enquiry information — the name, email address and message you submit through our contact form.",
+     "Technical information — your IP address, browser type and pages viewed, recorded in standard server logs and used to keep the site secure and working correctly."
+    ]
+   },
+   {
+    "heading": "How we use your information",
+    "lines": [
+     "To process, pack and deliver your order, and to contact you about it.",
+     "To handle refunds, replacements and delivery issues under our Refund Policy.",
+     "To respond to enquiries you send us.",
+     "To manage your account, where you have created one.",
+     "To keep records required for tax and accounting purposes.",
+     "To detect and prevent fraud and misuse of the website.",
+     "We send marketing email only if you have asked us to. Every marketing email includes an unsubscribe link, and unsubscribing does not affect order-related messages."
+    ]
+   },
+   {
+    "heading": "Payment information",
+    "lines": [
+     "We do not collect or store your card, UPI or net-banking details.",
+     "Where an online payment method is offered, payment is completed on the payment provider’s own secure systems and we receive only a confirmation of the result.",
+     "Where you choose Cash on Delivery, payment is collected at the time your order is handed to you."
+    ]
+   },
+   {
+    "heading": "Cookies",
+    "lines": [
+     "We use cookies that are necessary for the site to function, including keeping items in your cart and keeping you signed in.",
+     "Most browsers let you block or delete cookies through their settings. Please note that blocking necessary cookies may stop parts of the website, such as the cart and checkout, from working correctly."
+    ]
+   },
+   {
+    "heading": "Who we share it with",
+    "lines": [
+     "We share your information only where it is needed to run the service:",
+     "Delivery partners — your name, address and phone number, so your order can be delivered.",
+     "Sellers on our marketplace — where an item is supplied by an independent seller, the details needed to prepare and dispatch that item.",
+     "Payment providers — where you pay online, to process and verify the transaction.",
+     "Our hosting and IT providers — who store and process data on our behalf under contract.",
+     "Authorities — where we are required to disclose information by law.",
+     "We do not sell your personal information, and we do not share it for third-party advertising."
+    ]
+   },
+   {
+    "heading": "Keeping your information secure",
+    "lines": [
+     "This website is served over an encrypted HTTPS connection. Access to order and customer data is limited to people who need it to fulfil orders and support customers.",
+     "No method of transmission or storage is completely secure, but we take reasonable steps to protect your information against loss, misuse and unauthorised access."
+    ]
+   },
+   {
+    "heading": "How long we keep it",
+    "lines": [
+     "Order and invoice records are retained for as long as required under applicable tax and accounting rules.",
+     "Account details are kept until you ask us to delete your account.",
+     "Contact-form enquiries are kept only as long as needed to deal with the enquiry."
+    ]
+   },
+   {
+    "heading": "Your rights",
+    "lines": [
+     "Under India’s Digital Personal Data Protection Act, 2023, you may ask us to:",
+     "Confirm what personal data we hold about you and obtain a copy of it.",
+     "Correct data that is inaccurate, incomplete or out of date.",
+     "Erase your personal data, where we are not required to retain it.",
+     "Withdraw a consent you previously gave, at any time.",
+     "Nominate another person to exercise these rights on your behalf.",
+     "To make a request, write to us using the contact details below. We will respond within a reasonable period."
+    ]
+   },
+   {
+    "heading": "Children",
+    "lines": [
+     "This website is not directed at children, and we do not knowingly collect personal data from anyone under 18. Orders should be placed by an adult."
+    ]
+   },
+   {
+    "heading": "Grievance redressal",
+    "lines": [
+     "If you have a concern about how your personal data has been handled, contact our grievance officer at hello@naadunalam.in or +91 90921 14630, marking your message for the attention of the Grievance Officer.",
+     "If you are not satisfied with our response, you may escalate the matter to the Data Protection Board of India."
+    ]
+   },
+   {
+    "heading": "Changes to this policy",
+    "lines": [
+     "We may update this policy as our services change or as the law requires. The current version is always the one published on this page.",
+     "Questions about your data?",
+     "We typically reply within one business day.",
+     "EMAIL",
+     "hello@naadunalam.in",
+     "PHONE",
+     "+91 90921 14630",
+     "ADDRESS",
+     "Chennai, Tamil Nadu 600001, India",
+     "HOURS",
+     "Monday to Saturday, 9:00 AM – 6:00 PM. Sunday closed.",
+     "Contact Us"
+    ]
+   }
+  ]
+ }
+}

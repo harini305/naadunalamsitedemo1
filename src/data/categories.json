@@ -1,0 +1,146 @@
+[
+ {
+  "slug": "aval-flakes",
+  "name": "Aval / Flakes",
+  "nameTa": "அவல் வகைகள்",
+  "count": 17,
+  "description": "Traditional rice flakes — aval pressed from heirloom paddy varieties.",
+  "image": {
+   "src": "/images/categories/cat-aval-flakes.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "oil-vinegers",
+  "name": "Ghee & Oil",
+  "nameTa": "நெய் & எண்ணெய் வகைகள்",
+  "count": 5,
+  "description": "",
+  "image": {
+   "src": "/images/categories/cat-oil-vinegers.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "health-mixes",
+  "name": "Health Mixes",
+  "nameTa": "ஆரோக்கிய மாவுகள்",
+  "count": 9,
+  "description": "Traditional kanji and dosai maavu, oottachathu maavu, protein and wellness drink mixes.",
+  "image": {
+   "src": "/images/categories/cat-health-mixes.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "herbal-wellness",
+  "name": "Herbal & Wellness",
+  "nameTa": "மூலிகை & நலவாழ்வு பொருட்கள்",
+  "count": 2,
+  "description": "Traditional herbal and bath-care preparations — Seekkai Podi, Kuliyal Podi and Panchakara Kudineer.",
+  "image": {
+   "src": "/images/categories/cat-herbal-wellness.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "honey",
+  "name": "Honey",
+  "nameTa": "தேன்",
+  "count": 1,
+  "description": "",
+  "image": {
+   "src": "/images/categories/cat-honey.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "paruppu-pulses",
+  "name": "Lentils and Pulses",
+  "nameTa": "பருப்பு வகைகள்",
+  "count": 12,
+  "description": "Traditional dals and pulses — Kadalai Paruppu, Thuvaram Paruppu, Ulundhu, Payaru and Kondakadalai.",
+  "image": {
+   "src": "/images/categories/cat-paruppu-pulses.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "masala-podi",
+  "name": "Masala & Powders",
+  "nameTa": "மசாலா & பொடி வகைகள்",
+  "count": 5,
+  "description": "Traditional ground masalas and podis — Sambar, Kuzhambu, Rasam and Milagai Podi.",
+  "image": {
+   "src": "/images/categories/cat-masala-podi.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "siruthaniyam",
+  "name": "Millets",
+  "nameTa": "சிறுதானியங்கள்",
+  "count": 7,
+  "description": "Traditional small millets — Samai, Thinai, Kuthiraivali, Varagu, Kezhvaragu, Kambu and Cholam.",
+  "image": {
+   "src": "/images/categories/cat-siruthaniyam.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "natural-sweeteners",
+  "name": "Natural Sweeteners",
+  "nameTa": "இயற்கை இனிப்புகள்",
+  "count": 5,
+  "description": "Naattu Sarkkarai, Karuppatti, Urundai Vellam, Panangkarkandu and Then.",
+  "image": {
+   "src": "/images/categories/cat-natural-sweeteners.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "other-rice",
+  "name": "Other Rice",
+  "nameTa": "மற்ற அரிசி வகைகள்",
+  "count": 3,
+  "description": "Everyday table rice varieties — Ponni, Idli Rice and Barley.",
+  "image": {
+   "src": "/images/categories/cat-other-rice.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "personal-care",
+  "name": "Personal Care",
+  "nameTa": "உடல் பராமரிப்பு",
+  "count": 2,
+  "description": "Traditional bath and hair care preparations used in place of soap and shampoo — Kuliyal Podi and Seekkai Podi.",
+  "image": {
+   "src": "/images/categories/cat-personal-care.webp",
+   "w": 900,
+   "h": 900
+  }
+ },
+ {
+  "slug": "rice-grains",
+  "name": "Traditional Rice",
+  "nameTa": "பாரம்பரிய அரிசி வகைகள்",
+  "count": 17,
+  "description": "",
+  "image": {
+   "src": "/images/categories/cat-rice-grains.webp",
+   "w": 900,
+   "h": 900
+  }
+ }
+]

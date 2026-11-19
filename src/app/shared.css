@@ -1,0 +1,173 @@
+/* ---------------------------------------------------------- inner pages */
+.page { padding-top: var(--header-h); }
+
+/* compact text-only page heading (no image, per house rule) */
+.phead {
+  padding: 40px var(--gutter) 28px;
+  text-align: center;
+  background: var(--paper);
+}
+.phead h1 { max-width: 18em; margin-inline: auto; }
+.phead__ta { display: block; margin-top: 10px; color: var(--brown-gold); font-weight: 600; font-size: clamp(18px, 0.6vw + 15px, 22px); }
+.phead p { max-width: 46em; margin: 12px auto 0; color: var(--muted); font-size: var(--fs-lead); }
+.phead--left { text-align: left; }
+.phead--left h1, .phead--left p { margin-inline: 0; }
+
+/* ---------------------------------------------------------- product card */
+.pcard {
+  position: relative; display: flex; flex-direction: column;
+  background: var(--surface); border-radius: var(--radius-lg);
+  box-shadow: 0 1px 0 var(--line), 0 0 0 1px var(--line) inset;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.pcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+.pcard__media {
+  display: block; aspect-ratio: 1; border-radius: var(--radius-lg) var(--radius-lg) 0 0; background: #f4f1e8;
+}
+.pcard__media img { width: 100%; height: 100%; object-fit: cover; }
+.pcard__media.is-label { background: #fff; }
+.pcard__media.is-label img { object-fit: contain; padding: 6%; }
+.pcard__wish {
+  position: absolute; top: 10px; right: 10px; width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center; border: 0; background: rgba(255, 255, 255, 0.92); color: var(--forest);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); transition: transform 0.2s, color 0.2s;
+}
+.pcard__wish svg { width: 20px; height: 20px; }
+.pcard__wish:hover { transform: scale(1.06); }
+.pcard__wish.is-on { color: #b0412a; }
+.pcard__body { display: flex; flex-direction: column; gap: 10px; padding: 14px 16px 16px; flex: 1; }
+/* name: max 2 lines; Tamil: max 2 lines — the block keeps the same height in every card */
+.pcard__title { display: grid; align-content: start; gap: 3px; min-height: calc(2 * 1.2 * 19px + 3px + 2 * 1.5 * 15px); }
+.pcard__name, .pcard__ta { display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; }
+.pcard__name { font-family: var(--font-display); font-weight: 600; font-size: 19px; line-height: 1.2; letter-spacing: -0.01em; }
+.pcard__ta { font-size: 15px; line-height: 1.5; color: var(--brown-gold); font-weight: 500; }
+/* footer: pack/seller + price row, always pinned to the bottom of the card */
+.pcard__foot { margin-top: auto; display: grid; gap: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.pcard__meta { font-size: 14px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pcard__row { display: flex; align-items: center; justify-content: space-between; }
+.pcard__price { font-weight: 700; font-size: 18px; color: var(--forest); }
+.pcard__add {
+  display: inline-grid; place-items: center; width: 42px; height: 42px; border-radius: 50%;
+  border: 0; background: var(--accent); color: #fff; transition: transform 0.2s, background-color 0.2s;
+}
+.pcard__add svg { width: 20px; height: 20px; }
+.pcard__add:hover { transform: scale(1.08); background: var(--accent-hover); }
+.pcard__add--text { width: auto; padding: 0 14px; border-radius: 999px; font-size: 14px; font-weight: 600; }
+
+.pgrid { display: grid; gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* fill variant: card stretches to its row; the photo absorbs the spare height */
+@media (min-width: 1024px) {
+  .pcard--fill { height: 100%; }
+  .pcard--fill .pcard__media { position: relative; aspect-ratio: auto; flex: 1 1 0; min-height: 220px; }
+  .pcard--fill .pcard__media img { position: absolute; inset: 0; }
+  .pcard--fill .pcard__body { flex: none; }
+  .pcard--fill .pcard__title { min-height: calc(2 * 1.2 * 19px + 3px + 2 * 1.5 * 15px); }
+}
+@media (min-width: 760px) { .pgrid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; } }
+@media (min-width: 1000px) { .pgrid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .pgrid--shop { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 420px) {
+  .pcard__body { padding: 12px; }
+  .pcard__name { font-size: 17px; }
+  .pcard__ta { font-size: 14px; }
+  .pcard__title, .pcard--fill .pcard__title { min-height: calc(2 * 1.2 * 17px + 3px + 2 * 1.5 * 14px); }
+  .pcard__foot { gap: 8px; padding-top: 8px; }
+  .pcard__meta { font-size: 13px; }
+  .pcard__price { font-size: 16px; }
+  .pcard__add { width: 38px; height: 38px; }
+  .pcard__add--text { width: auto; font-size: 13px; padding: 0 10px; }
+}
+
+/* ---------------------------------------------------------- page band (Journal, Sellers — same frame as the Shop band)
+   desktop: title | white control bar  ·  accent line + intro | pills — two aligned rows, no dead corners */
+.pband {
+  position: relative; isolation: isolate; overflow: hidden; padding: 30px 0 28px;
+  background:
+    radial-gradient(60% 120% at 100% 0%, rgba(200, 217, 154, 0.45), transparent 70%),
+    radial-gradient(40% 90% at 0% 100%, rgba(110, 155, 85, 0.14), transparent 70%),
+    var(--sand);
+  border-bottom: 1px solid var(--line);
+}
+.pband::before { content: ""; position: absolute; inset: 0; z-index: -1; background: var(--grain); opacity: 0.5; }
+.pband__grid { display: grid; gap: 14px; align-items: center; }
+.pband__title { font-size: var(--fs-h1); color: var(--forest); text-wrap: balance; }
+.pband__sub { display: grid; gap: 6px; }
+.pband__accent { font-size: clamp(18px, 0.6vw + 15px, 22px); font-weight: 600; line-height: 1.4; color: var(--accent); }
+.pband__intro { color: var(--muted); max-width: 36em; }
+.pband__bar { margin-top: 6px; }
+@media (min-width: 1024px) {
+  .pband { padding: 32px 0 30px; }
+  .pband__grid {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    grid-template-areas: "title bar" "sub extra";
+    column-gap: 40px; row-gap: 14px;
+  }
+  .pband__title { grid-area: title; }
+  .pband__sub { grid-area: sub; align-self: start; }
+  .pband__bar { grid-area: bar; margin-top: 0; }
+  .pband__extra { grid-area: extra; align-self: start; }
+}
+@media (min-width: 1200px) { .pband__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 56px; } }
+@media (max-width: 600px) { .pband { padding: 22px 0; } }
+
+/* white segmented bar — the same weight as the shop search bar */
+.segbar {
+  display: flex; gap: 4px; padding: 6px; border-radius: 999px; background: var(--surface);
+  box-shadow: 0 0 0 1px var(--line) inset, 0 14px 34px rgba(34, 75, 55, 0.12);
+}
+.segbar__item {
+  flex: 1 1 auto; display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 48px; padding: 0 16px; border: 0; border-radius: 999px; background: transparent;
+  font-size: 15px; font-weight: 600; color: var(--forest); white-space: nowrap;
+  transition: background-color 0.2s, color 0.2s;
+}
+.segbar__item:hover { background: var(--mint); }
+.segbar__item[aria-pressed="true"], .segbar__item--solid { background: var(--forest); color: #fff; }
+.segbar__item--solid:hover { background: var(--ink); }
+.segbar__item svg { width: 18px; height: 18px; }
+.segbar__n {
+  min-width: 26px; height: 26px; padding: 0 8px; border-radius: 999px; display: grid; place-items: center;
+  background: var(--mint); color: var(--forest); font-size: 13px; font-weight: 700;
+}
+.segbar__item[aria-pressed="true"] .segbar__n { background: rgba(255, 255, 255, 0.18); color: #fff; }
+@media (min-width: 1024px) and (max-width: 1199px) { .segbar__item { padding: 0 12px; font-size: 14px; } }
+@media (max-width: 600px) {
+  .segbar { flex-wrap: wrap; border-radius: 26px; }
+  .segbar__item { min-height: 42px; padding: 0 12px; font-size: 14px; }
+}
+
+/* small pills row (facts / points) */
+.pills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.pills > li, .pills__link {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 34px; padding: 0 14px 0 10px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7); box-shadow: 0 0 0 1px var(--line) inset;
+  font-size: 14px; font-weight: 600; color: var(--forest);
+}
+.pills svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
+
+/* ---------------------------------------------------------- cart toast */
+.cart-toast {
+  position: fixed; left: 50%; bottom: 20px; z-index: 120;
+  display: flex; align-items: center; gap: 16px; max-width: calc(100vw - 32px);
+  padding: 12px 12px 12px 18px; border-radius: 999px; background: var(--ink); color: #fff;
+  font-size: 15px; box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+  transform: translate(-50%, 140%); opacity: 0; transition: transform 0.4s var(--ease), opacity 0.3s;
+  pointer-events: none;
+}
+.cart-toast.is-on { transform: translate(-50%, 0); opacity: 1; pointer-events: auto; }
+.cart-toast span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cart-toast__link { flex: none; padding: 8px 14px; border-radius: 999px; background: var(--accent); color: #fff; font-weight: 600; }
+
+/* ---------------------------------------------------------- qty stepper */
+.qty { display: inline-flex; align-items: center; border: 1px solid #d6dcb6; border-radius: 999px; background: #fff; }
+.qty button { width: 42px; height: 42px; display: grid; place-items: center; border: 0; background: none; border-radius: 50%; }
+.qty button:hover { background: var(--mint); }
+.qty svg { width: 18px; height: 18px; }
+.qty output, .qty input { width: 36px; text-align: center; font-weight: 600; border: 0; background: none; }
+
+/* ---------------------------------------------------------- pinned split (pin method) */
+.pin-split { display: grid; gap: 24px; }
+@media (min-width: 960px) {
+  .pin-split { grid-template-columns: minmax(300px, 0.85fr) 1.15fr; gap: 48px; align-items: start; }
+  .pin-split > .pin { position: sticky; top: calc(var(--header-h) + 24px); }
+}

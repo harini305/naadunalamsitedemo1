@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Naadu Nalam — design tokens + base
+   Two font families only:
+     1. Fraunces      — headings + the "Naadu Nalam" wordmark (logo font)
+     2. Hind Madurai  — body, UI and ALL Tamil text (Latin + Tamil in one family)
+   Fraunces has no Tamil glyphs, so Tamil inside headings falls through to
+   Hind Madurai via the stack — still two families.
+   ========================================================================== */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("/fonts/fraunces-latin-ext.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* Hind Madurai — Latin */
+@font-face { font-family: "Hind Madurai"; font-weight: 400; font-display: swap; src: url("/fonts/hind-madurai-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Hind Madurai"; font-weight: 500; font-display: swap; src: url("/fonts/hind-madurai-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Hind Madurai"; font-weight: 600; font-display: swap; src: url("/fonts/hind-madurai-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Hind Madurai"; font-weight: 700; font-display: swap; src: url("/fonts/hind-madurai-latin-700-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* Hind Madurai — Tamil (also carries ₹ U+20B9) */
+@font-face { font-family: "Hind Madurai"; font-weight: 400; font-display: swap; src: url("/fonts/hind-madurai-tamil-400-normal.woff2") format("woff2"); unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC; }
+@font-face { font-family: "Hind Madurai"; font-weight: 500; font-display: swap; src: url("/fonts/hind-madurai-tamil-500-normal.woff2") format("woff2"); unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC; }
+@font-face { font-family: "Hind Madurai"; font-weight: 600; font-display: swap; src: url("/fonts/hind-madurai-tamil-600-normal.woff2") format("woff2"); unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC; }
+@font-face { font-family: "Hind Madurai"; font-weight: 700; font-display: swap; src: url("/fonts/hind-madurai-tamil-700-normal.woff2") format("woff2"); unicode-range: U+0964-0965, U+0B82-0BFA, U+200C-200D, U+20B9, U+25CC; }
+
+:root {
+  /* palette — owner-supplied theme (2026-11-19):
+     Deep Green · Leaf Green · Lime · Pale Yellow · White.
+     Leaf green is deepened slightly (#4f7a3a) for buttons so white text passes WCAG AA;
+     lime is used for text and lines on dark green. Token names are kept from the first build. */
+  --forest: #224b37;      /* deep green — header, hero panel, dark bands, dark buttons */
+  --olive: #1e4231;       /* deeper green — second dark band (Panchabhootham, seller card); lime text reads at 7:1 */
+  --ink: #1c2e24;         /* body text */
+  --leaf: #3f6430;        /* hover / link accent */
+  --accent: #4f7a3a;      /* leaf green — primary buttons, highlights on light */
+  --accent-hover: #3f6430;
+  --saffron: #c8d99a;     /* lime — text, lines and dots on dark backgrounds */
+  --gold-text: #d8e5b0;
+  --earth: #6e9b55;       /* leaf green — rings, hairlines */
+  --paper: #f6f2e0;       /* pale yellow — page background */
+  --surface: #ffffff;     /* white — cards */
+  --mint: #e4eccb;        /* lime tint — soft panels, active rows */
+  --line: #e2dfc4;
+  --muted: #5d6b5f;
+  --brown-gold: #4f7a3a;  /* leaf green — Tamil lines on light backgrounds */
+  --sage: #6e9b55;
+  /* deeper tones for dark bands */
+  --ink-deep: #163325;
+  --sand: #f0eacf;        /* pale yellow tint — soft section bands */
+  --sage-band: #e3ebcb;   /* soft sage — the seven-generations band (sets it apart from the cream hero) */
+  --cream: #f6f2e0;
+  /* emblem colours (sampled from the supplied logo artwork) — used only for Panchabhootham */
+  --el-earth: #7a3b22;
+  --el-water: #1e6fae;
+  --el-fire: #d9831a;
+  --el-air: #2e8b3f;
+  --el-space: #24364a;
+
+  --font-display: "Fraunces", "Hind Madurai", Georgia, serif;
+  --font-body: "Hind Madurai", system-ui, sans-serif;
+
+  /* type scale — identical on every page */
+  --fs-h1: clamp(36px, 1.9vw + 24px, 56px);
+  --fs-h2: clamp(28px, 1.1vw + 21px, 42px);
+  --fs-h3: clamp(22px, 0.5vw + 18px, 28px);
+  --fs-lead: clamp(17px, 0.25vw + 16px, 19px);
+  --fs-body: clamp(16px, 0.15vw + 15.5px, 17px);
+  --fs-small: 14px;
+  --fs-nav: 16px;
+
+  --section-gap: 32px;
+  --gutter: clamp(16px, 4vw, 56px);
+  --max: 1360px;
+  --header-h: 72px;
+  --footer-h: auto;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --shadow: 0 10px 30px rgba(34, 75, 55, 0.08);
+  --shadow-hover: 0 16px 38px rgba(34, 75, 55, 0.16);
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+@media (min-width: 900px) {
+  :root { --header-h: 84px; --footer-h: 108px; }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: clip;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+[id] { scroll-margin-top: var(--header-h); }
+::selection { background: var(--accent); color: #fff; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
+  margin: 0;
+  text-wrap: balance;
+}
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+p { margin: 0; }
+.ta { font-family: var(--font-body); line-height: 1.55; letter-spacing: 0; }
+.lead { font-size: var(--fs-lead); }
+.muted { color: var(--muted); }
+.small { font-size: var(--fs-small); }
+
+.wrap { width: 100%; max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.section { padding-block: var(--section-gap); }
+
+.skip { position: absolute; left: -9999px; top: 0; z-index: 200; background: var(--accent); color: #fff; padding: 10px 16px; }
+.skip:focus { left: 12px; top: 12px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* --------------------------------------------------------------- buttons */
+.btn {
+  --b-bg: var(--accent); --b-fg: #fff; --b-bd: var(--accent);
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 50px; padding: 0 26px; border-radius: 999px;
+  background: var(--b-bg); color: var(--b-fg); border: 1.5px solid var(--b-bd);
+  font-family: var(--font-body); font-weight: 600; font-size: 16px; line-height: 1;
+  white-space: nowrap;
+  transition: transform 0.25s var(--ease), background-color 0.25s, color 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(22, 51, 37, 0.2); --b-bg: var(--accent-hover); --b-bd: var(--accent-hover); }
+.btn--forest { --b-bg: var(--forest); --b-fg: #fff; --b-bd: var(--forest); }
+/* on dark green backgrounds: lime button with deep-green text */
+.btn--lime { --b-bg: var(--saffron); --b-fg: var(--forest); --b-bd: var(--saffron); }
+.btn--lime:hover { --b-bg: var(--gold-text); --b-bd: var(--gold-text); }
+.btn--forest:hover { --b-bg: var(--leaf); --b-bd: var(--leaf); }
+.btn--ghost-light { --b-bg: transparent; --b-fg: #fff; --b-bd: rgba(255, 255, 255, 0.55); }
+.btn--ghost-light:hover { --b-bg: #fff; --b-fg: var(--ink); --b-bd: #fff; }
+.btn--ghost { --b-bg: transparent; --b-fg: var(--forest); --b-bd: var(--forest); }
+.btn--ghost:hover { --b-bg: var(--forest); --b-fg: #fff; }
+.btn[disabled] { opacity: 0.5; pointer-events: none; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+.text-link {
+  font-weight: 600; color: var(--forest);
+  background: linear-gradient(currentColor, currentColor) 0 100% / 100% 1.5px no-repeat;
+  padding-bottom: 2px; transition: background-size 0.3s var(--ease);
+}
+.text-link:hover { background-size: 0% 1.5px; background-position: 100% 100%; }
+
+/* chips (filters, packs) */
+.chip {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 16px;
+  border-radius: 999px; border: 1px solid var(--line); background: var(--surface);
+  font-size: 15px; font-weight: 500; color: var(--ink); white-space: nowrap;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+.chip:hover { border-color: var(--forest); }
+.chip[aria-pressed="true"], .chip.is-active { background: var(--forest); border-color: var(--forest); color: #fff; }
+.chip .ta { font-size: 14px; opacity: 0.85; }
+
+/* form fields */
+.field { display: grid; gap: 6px; }
+.field label { font-size: 15px; font-weight: 600; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: 12px 14px; border-radius: var(--radius);
+  border: 1px solid #d6dcb6; background: var(--surface); font-size: 16px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.field textarea { min-height: 130px; resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--forest); box-shadow: 0 0 0 3px rgba(34, 75, 55, 0.15); }
+.field .err { color: #a3361a; font-size: 14px; }
+.field [aria-invalid="true"] { border-color: #a3361a; }
+
+/* demo / preview notice */
+.notice {
+  display: flex; gap: 12px; align-items: flex-start; padding: 14px 16px; border-radius: var(--radius);
+  background: #fff6df; border: 1px solid #f1d58f; color: #4f3a08; font-size: 15px; line-height: 1.5;
+}
+.notice strong { font-weight: 700; }
+
+/* reveal (GSAP adds .reveal-ready to <html>; without JS content is visible) */
+.reveal-ready [data-reveal] { opacity: 0; transform: translateY(26px); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal-ready [data-reveal] { opacity: 1 !important; transform: none !important; }
+}
+
+/* images */
+.img-cover { width: 100%; height: 100%; object-fit: cover; }
+.zoom { overflow: hidden; isolation: isolate; }
+.zoom img { transition: transform 0.7s var(--ease); backface-visibility: hidden; }
+.zoom:hover img, a:hover .zoom img { transform: scale(1.03); }
+
+/* last section of every page + footer = one screen (desktop) */
+@media (min-width: 900px) and (min-height: 600px) {
+  .fit-footer { min-height: calc(100svh - var(--footer-h)); display: flex; flex-direction: column; }
+  .fit-footer > .fit-grow { flex: 1 1 auto; }
+  /* a product row inside the last section absorbs the spare height (photos flex, no empty band) */
+  .fit-col { display: flex; flex-direction: column; }
+  .fit-col > .pgrid { flex: 1 1 auto; grid-auto-rows: 1fr; }
+  .fit-col .pcard__media { position: relative; aspect-ratio: auto; flex: 1 1 0; min-height: 150px; }
+  .fit-col .pcard__media img { position: absolute; inset: 0; }
+  .fit-col .pcard__title { min-height: 3.6em; }
+}
+
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

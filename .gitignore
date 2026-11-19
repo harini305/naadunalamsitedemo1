@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.cache/
+.vercel/
+.env*
+npm-debug.log*
+*.tsbuildinfo
+next-env.d.ts
+# Phase 1 audit, owner notes and client originals stay on disk only (never in the public repo)
+docs/

@@ -1,0 +1,6 @@
+docs/
+scripts/
+.cache/
+.next/
+node_modules/
+.env*
